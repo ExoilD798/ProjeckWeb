@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Tugas Pak Bagja</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fdfdfd;
+    }
+    header {
+      display: flex; justify-content: flex-end; align-items: center;
+      padding: 10px 20px; background-color: #f8f9fa; border-bottom: 1px solid #ddd;
+    }
+    header img {
+      height: 60px; margin-left: 10px;
+    }
+    header .title {
+      font-size: 24px; font-weight: bold; margin-right: auto;
+    }
+
+    .carousel-container {
+      position: relative; width: 100%; max-width: 1000px;
+      margin: 20px auto; overflow: hidden; border-radius: 10px;
+    }
+
+    .carousel-slide {
+      display: none; position: relative;
+    }
+
+    .carousel-slide img {
+      width: 100%; height: auto; display: block;
+    }
+
+    .carousel-text {
+      position: absolute; bottom: 20px; left: 20px;
+      background: rgba(0,0,0,0.5); color: #fff;
+      padding: 10px 20px; border-radius: 5px;
+      font-size: 18px;
+    }
+
+    .video-container {
+      display: flex; justify-content: center; margin: 40px auto;
+    }
+
+    video, iframe {
+      width: 90%; max-width: 800px; border-radius: 10px;
+    }
+
+    .description {
+      max-width: 900px; margin: 30px auto; padding: 0 20px;
+      line-height: 1.6; color: #333;
+    }
+
+    .description h3 {
+      margin-top: 30px; color: #444;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .button-group a {
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .map-btn { background: #007bff; }
+    .map-btn:hover { background: #0056b3; }
+
+    .email-btn { background: #28a745; }
+    .email-btn:hover { background: #1e7e34; }
+
+    .wa-btn { background: #25D366; }
+    .wa-btn:hover { background: #1ebe5b; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title">Kelompok Cucurut (Harys X Yuda)</div>
+    <img src="logo.png" alt="Logo Sekolah" id="logo" />
+  </header>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="slide1.png" alt="Gambar 1" />
+      <div class="carousel-text">MARTABAK SUSU KEJU 🥰😋</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="slide2.png" alt="Gambar 2" />
+      <div class="carousel-text">MARTABAK ASIN MAHKOTA 🥵</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="slide3.png" alt="Gambar 3" />
+      <div class="carousel-text">MIE AYAM "EMANG BISA YA? HIDUP TANPA MIE AYAM"</div>
+    </div>
+  </div>
+
+  <div class="video-container">
+    <video controls>
+      <source src="B0K3P.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+  </div>
+
+  <div class="description">
+    <h3>Martabak Asin (Martabak Telur)</h3>
+    <p>Martabak asin, atau lebih dikenal sebagai martabak telur, adalah hidangan gurih khas Indonesia yang sangat populer sebagai camilan atau lauk pendamping. Dibuat dari kulit tipis diisi daging cincang, telur, daun bawang, dan rempah. Digoreng hingga renyah, disajikan dengan saus cuka atau acar timun pedas.</p>
+
+    <h3>Martabak Manis Susu Keju (Martabak Bangka)</h3>
+    <p>Martabak manis adalah kue panekuk tebal dengan adonan bersarang. Setelah matang, diberi mentega lalu diberi topping keju parut dan susu kental manis. Rasanya manis, gurih, dan lembut — favorit banyak orang untuk camilan malam.</p>
+
+    <h3>Mie Ayam</h3>
+    <p>Mie ayam terdiri dari mie kuning, potongan ayam kecap, sawi rebus, kuah kaldu, dan taburan daun bawang. Bisa ditambah sambal, kecap, dan pangsit. Variasinya banyak seperti mie ayam bangka, yamin, atau pakai ceker/jamur. Cocok disantap kapan saja!</p>
+  </div>
+
+  <div class="button-group">
+    <a href="https://maps.app.goo.gl/foHRDEguBHq8EiKTA" target="_blank" class="map-btn">Mampir ya -> 🌍 Alamat GMaps SMK Cibening</a>
+    <a href="mailto:surat.smkcibening@gmail.com" class="email-btn">✉️ Email nya ini bukan Phising</a>
+    <a href="https://wa.me/6285700131985" target="_blank" class="wa-btn">💬 WhatsApp Sekarang Biar Makin Deket 👉👈</a>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".carousel-slide");
+
+    function showSlides() {
+      slides.forEach((slide) => {
+        slide.style.display = "none";
+      });
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000);
+    }
+
+    showSlides();
+  </script>
+
+</body>
+</html>
